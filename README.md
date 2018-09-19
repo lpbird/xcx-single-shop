@@ -14,21 +14,26 @@
 
 ## 项目配置与说明
 1.配置后端配置文件（如是个人小程序则无法使用支付功能）<br>
- 1）server/config/wxConfig.js  此文件中填入appid appsecert Mch_id(商户id) Mch_key(商户key) 并将controllers目录下的wx_pay 下的三个证书换成自己的（微信支付平台证书下载）<br>
- 2）七牛云（暂时不开源后台关系，也可不配置，后期会陆续上传） 由于后台管理中需要对商品进行管理 用到了图片上传接口，这边使用的是七牛云的文件平台，配置了cdn与水印 大家自己申请账号后（免费的）在server/controller/index.js 下配置<br>
- 3）mysql 数据库 server/sql.js 中进行数据库配置 创建 名为rest的数据库后倒入本项目中的 rest.sql（数据库结构＋测试数据） 可直接本地测试<br>
+ 1）`server/config/wxConfig.js`  此文件中填入`appid` `appsecert` `Mch_id`(商户id) `Mch_key`(商户key) 并将controllers目录下的`wx_pay` 下的三个证书换成自己的（微信支付平台证书下载）<br>
+ 2）七牛云（暂时不开源后台关系，也可不配置，后期会陆续上传） 由于后台管理中需要对商品进行管理 用到了图片上传接口，这边使用的是七牛云的文件平台，配置了cdn与水印 大家自己申请账号后（免费的）在`server/controller/index.js` 下配置<br>
+ 3）mysql 数据库 `server/sql.js` 中进行数据库配置 创建 名为rest的数据库后倒入本项目中的 rest.sql（数据库结构＋测试数据） 可直接本地测试<br>
 2.小程序端配置<br>
-小程序端根目录下的app.js下 apiHost 为所有接口baseUrl统一配置  <br>
+小程序端根目录下的`app.js`下 `apiHost` 为所有接口baseUrl统一配置  <br>
 
 ## 回答大家私信最多的问题：无服务器，如何手机预览本项目？
 1.进入server 目录 执行以下命令：<br>
- npm i <br>
- node app.js <br>
+ ```javascript
+ npm i 
+ node app.js 
+ `````
  成功启动本地服务（先确保mysql数据库服务成功启动）<br>
 2.手机开启热点 电脑端连接  查看电脑端ip 将小程序的apiHost替换成http://+电脑ip+:7002  <br>
 此时即可手机预览小程序<br>
 
 希望大家随手star下哈～ 后面会把后台管理端也放上来<br>
-微信交流群：<br><img style="margin:auto" src="https://github.com/lpbird/xcx-single-shop/raw/master/screenshot/IMG_1739.JPG" width="300" height="300" alt="订单列表"/>
+微信交流群：<br>
+<div align=center>
+  <img  src="https://github.com/lpbird/xcx-single-shop/raw/master/screenshot/IMG_1739.JPG" width="300" height="300" alt="订单列表"/>
+</div>
 
 
