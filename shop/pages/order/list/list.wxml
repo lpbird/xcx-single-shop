@@ -1,0 +1,44 @@
+<!--pages/order/list/list.wxml-->
+<view>
+  <view class='go-center' style='margin-top:10px'>
+    <view class='tab-box'>
+      <view bindtap='changeTab'  data-index="0" class="go-center {{tabIndex==0?'active-color':'unactive-color'}}" style='width:50%;height:60rpx;line-height:60rpx;'>即时订单</view>
+      <view bindtap='changeTab' data-index="1" class="go-center {{tabIndex==1?'active-color':'unactive-color'}}" style='width:50%;height:60rpx;line-height:60rpx;'>我的预约</view>
+    </view>
+  </view>
+  <!-- //订单 -->
+  <view wx:if="{{tabIndex==0&&listData.length==0}}">
+    <view class='go-center' style="margin-top:100px">
+      <i class="iconfont icon-dingdan dindgan-i"></i>
+    </view>
+    <view class='go-center note-btn'>目前没有即时订单</view>
+    <view class='go-center' style='margin-top:20px'>
+      <view class='go-center down-center start-btn' bindtap='golist'>开始点餐</view>
+    </view>
+  </view>
+  <view class='orderList'>
+    <view class="card" id="a{{index}}" wx:for="{{listData}}" wx:key="unique">
+      <view class='info'>
+        <image style='border-radius:5px' src='{{"http://cdn.handsomebird.xin/t"+item.cartList[0].img+".jpg?imageView2/2/w/144/h/144/format/png/q/75|watermark/2/text/5aWI6Iy25rC05bOw/font/5a6L5L2T/fontsize/240/fill/I0ZGRkZGRg==/dissolve/100/gravity/NorthEast/dx/5/dy/5|imageslim"}}'
+          lazy-load></image>
+        <view class='detail'>
+          <view style='padding:5px' wx:key="unique">{{item.cartList[0].name}}
+            <label wx:if="{{item.cartList.length>1}}" style="font-size:28rpx;color:#333">({{item.cartList[0].detail}})</label>
+          </view>
+          <view style='padding:5px;font-size:30rpx;color:#333' wx:if="{{item.cartList.length==1}}" wx:key="unique">({{item.cartList[0].detail}})</view>
+          <view style='padding:5px' wx:if="{{item.cartList.length>1}}" wx:key="unique"> 等{{item.cupNumber}}杯饮品</view>
+
+        </view>
+      </view>
+      <view style='text-align:right;margin-right:25px;color:#FF9C35;border-bottom:1px solid #e3e3e3;'>
+        <em style='font-size:28rpx;color:#333;float:left;padding-left:10px' wx:if="{{tabIndex==1}}">预约时间:{{item.appointTime}}</em>
+        <label style='font-size:16px;'>¥ {{item.sumMoney}}.00</label>
+      </view>
+      <view class='opBar'>
+        <a data-orderId='{{item.orderId}}' bindtap="goDetail">查看订单详情</a>
+
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/cut/cut.wxml-->
+  <view class='orderList'>
+    <view wx:if="{{listData.length==0}}" style='text-align:center;font-size:14px;color:#333;margin-top:10px'>您暂时没有可用的优惠券哦～</view>
+    <view class="{{item.status == 0 ? 'card unuse' : 'card isUse'}}" id="a{{index}}" wx:for="{{listData}}" wx:key="unique">
+      <view class='info'>
+        <view class='detail'>
+          <view class="top-r"><span class="sl">{{item.detail.cut}}元立减券</span>{{item.detail.typeDes}}</view>
+          <view style='padding:5px;font-size:24rpx;'>有效期至：{{item.detail.endDate}}</view>
+          <view style='padding:5px' class="note">
+                  本券不与单品优惠券通用
+          </view>
+          <image class='logo-re' src='../../images/logo-list.png'></image>
+        </view>
+        <view wx:if="{{item.status == 1}}" class='st'>
+          已使用
+        </view>
+      </view>
+    </view>
+  </view>

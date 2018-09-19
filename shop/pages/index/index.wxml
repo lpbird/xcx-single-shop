@@ -1,0 +1,153 @@
+<!--index.wxml-->
+<view>
+  <view class='topTitle'>
+    <image src='../../images/logo.png' class='top'></image>
+    <image bindtap='goMine' class='mine' src='../../images/mine.png'></image>
+  </view>
+  <!-- 顶部轮播图 -->
+  <swiper class="{{isiphonex?'isInphoneX':'isInphone'}}" circular="true" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image {{isiphonex?'isInphoneX':'isInphone'}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='oplist {{isiphonex?"op-iphoenx":""}}'>
+    <view class='oplist-item op-border' bindtap='golist'>
+      <view>
+        <image src='../../images/list.png'></image>
+      </view>
+      <view class='name'>
+        <label>自助点餐</label>
+      </view>
+      <a>点击进入</a>
+    </view>
+    <view class='oplist-item op-border' bindtap="letAppoint">
+      <view>
+        <image src='../../images/appoint.png'></image>
+      </view>
+      <view class='name'>
+        <label>预约取餐</label>
+      </view>
+      <a>点击进入</a>
+    </view>
+    <view class='oplist-item' bindtap="goOrderlist">
+      <view>
+        <image src='../../images/order.png'></image>
+      </view>
+      <view class='name'>
+        <label>订单列表</label>
+      </view>
+      <a>点击进入</a>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <!-- <view class='btn-bar'>
+    <image src="{{logo}}" class='logo' />
+    <view class='btn-block' style='padding-top: 80rpx;' bindtap='golist'>
+      <button class="btn_op1">
+        <i class="iconfont icon-wode" style="padding-right:10px"></i>自助点单</button>
+    </view>
+    <view class='btn-block' style=' padding-top: 30rpx; ' >
+     
+      <button class="btn_op2">
+        <i class="iconfont icon-dingdan" style="padding-right:10px"></i>预约点单</button>
+    </view>
+  </view> -->
+  <!-- 中部广告 -->
+  <!-- <view class="ad-box">
+    <image src='../../images/2-1.jpg' class="image_ad"></image>
+  </view> -->
+
+
+  <!-- 底部横向滑动box -->
+  <!-- <view class='bottom-box'>
+    <scroll-view scroll-x="true" class="scroll-box">
+      <view class='slide-inline-box'>
+        <image src='../../images/bottom_1.png' class='bottom-image'></image>
+      </view>
+      <view class='slide-inline-box'>
+        <image src='../../images/bottom_2.png' class='bottom-image'></image>
+      </view>
+      <view class='slide-inline-box'>
+        <image src='../../images/bottom_3.png' class='bottom-image'></image>
+      </view>
+    </scroll-view>
+  </view> -->
+</view>
+<view class="drawer_screen" data-type='1' bindtap="powerDrawer" data-statu="close2" wx:if="{{showSleepStatus}}"></view>
+<view class="sleep">
+  <image wx:if="{{showSleepStatus}}" src='../../images/sleep.png'></image>
+</view>
+
+<!-- 优惠券领取弹窗-->
+<view class="drawer_screen" data-type='1' bindtap="powerDrawer" data-statu="close" wx:if="{{showAdStatus}}"></view>
+<image wx:if="{{showAdStatus}}" class='logor' src='../../images/logor.png'></image>
+<view class="drawer_box_ad" animation="{{animationData}}" style="left:{{adleft}}" wx:if="{{showAdStatus}}">
+
+  <view class="drawer_content_ad" wx-if="{{reList[0].isR==0}}">
+    <view class='reduction'>
+      <view class='money'>
+        {{reList[0].cut}}
+        <span>元</span>
+      </view>
+      <view class='content'>
+        <view class='desc'>
+          <label>{{reList[0].typeDes}}</label>
+        </view>
+        <view class="date">
+          有效期至：{{reList[0].endDate}}
+        </view>
+        <view class="note">
+          本券不与单品优惠券通用
+        </view>
+      </view>
+      <view class='btn'>
+        <a class="btn-ok" data-reduction='{{reList[0].id}}' bindtap="getCut" wx-if="{{reList[0].isR==0}}">领取</a>
+        <a class="btn-ok" wx-if="{{reList[0].isR==1}}">已领取</a>
+      </view>
+    </view>
+  </view>
+  <view class="drawer_content_ad" wx-if="{{reList[1].isR==0}}">
+    <view class='reduction'>
+      <view class='money'>
+        {{reList[1].cut}}
+        <span>元</span>
+      </view>
+      <view class='content'>
+        <view class='desc'>
+          <label>{{reList[1].typeDes}}</label>
+        </view>
+        <view class="date">
+          有效期至：{{reList[1].endDate}}
+        </view>
+        <view class="note">
+          本券不与满减优惠券通用
+        </view>
+      </view>
+      <view class='btn'>
+        <a class="btn-ok" data-reduction='{{reList[1].id}}' bindtap="getCut" wx-if="{{reList[1].isR==0}}">领取</a>
+        <a class="btn-ok" wx-if="{{reList[1].isR==1}}">已领取</a>
+      </view>
+    </view>
+
+  </view>
+  <!-- <view class="btn" data-type='2' bindtap="powerDrawer" data-statu="close">
+      <a class="btn-ok">一键领取</a>
+     </view>    -->
+  <view class="reduction-note">点击领取后，可在小程序内，“我的” －“我的优惠券”中查看 </view>
+</view>
+<view class="drawer_screen" data-type='1' bindtap="powerDrawer" data-statu="close3" wx:if="{{showAppointStatus}}"></view>
+<view style='position:absolute;bottom:0px;width:100%;z-index:9999' wx:if="{{isAppoint}}">
+  <view class='timepick'>
+    <view style='color:#999' bindtap='closeAP'>取消</view>
+    请选择预约取餐时间
+    <view bindtap='goAppoint'>确定</view>
+  </view>
+  <picker-view  indicator-style="height: 50px;text-align:center" style="width: 100%; height: 300px;background:white" value="{{value}}" bindchange="bindPickerChange">
+    <picker-view-column>
+      <view wx:for="{{array}}" style="line-height: 50px;text-align:center">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

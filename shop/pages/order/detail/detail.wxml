@@ -1,0 +1,71 @@
+<!--pages/order/detail/detail.wxml-->
+<view>
+  <view class='go-center go-top-10' >
+    <view class="card-box">
+      <view class="card-fetch">
+        <view class="card-left-bar">
+          <label>取</label>
+          <label>餐</label>
+          <label>号</label>
+        </view>
+      </view>
+      <view>
+        <view class='go-top-10'>
+          <label class='number-card'>{{cathNumber}}</label>
+          <label class='statu-card' wx:if="{{status==1}}">制作中</label>
+          <label class='statu-card' wx:if="{{status==2}}">已完成</label>
+          <label class='statu-card' wx:if="{{status==0}}">已退款</label>
+        </view>
+        <view class='note-card' wx:if="{{model==0}}">
+
+          <span wx:if="{{status==1}}">饮品制作中,尽快为你服务</span>
+          <span wx:if="{{status==2}}">饮品制作完成，欢迎享用</span>  
+          <span wx:if="{{status==0}}">已退款，欢迎下次再来</span>    
+        </view>
+        <view class='note-card' wx:if="{{model==1}}">
+          <label wx:if="{{status==1}}">预约成功！请您于{{appointTime}}左右<span style="color:#E53085">到店</span>领取</label>
+          <label  wx:if="{{status==2}}">已领取，请尽情享用</label>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 订单详情 -->
+  <view class='order-info'>
+    <view class='order-info-title'>订单详情</view>
+    <view class='cart-list-box' wx:for="{{cartList}}" wx:key="unique">
+      <view class='list-info'>
+        <view>{{item.name}}</view>
+        <view class='list-info-size'>{{item.detail}}</view>
+      </view>
+      <view style='width:50%;padding:10px;'>
+        <view style='float:right'>
+          <view style='color:#A3A3A3'>x {{item.number}}</view>
+          <view>¥ {{item.sum}}.00</view>
+        </view>
+      </view>
+    </view>
+    <view class='order-cut' wx:if="{{cutMonney!=0}}">
+      <label class='order-cut-dec'>减</label>
+      <label class='order-cut-note'>{{cutText}}</label>
+      <label class='order-cut-number activity-color'>-¥ {{cutMonney}}.00</label>
+    </view> 
+    <view class='order-sum'>
+      <label>总计 </label>
+      <label class='order-sum-number activity-color'>¥ {{sumMonney}}</label>
+    </view>
+  </view>
+  <view class='order-info'>
+    <!-- 本应动态请求，在此写死 -->
+    <view class='order-info-title'>订单信息</view>
+    <view class='order-info-title flex-display' >订单号码
+      <view style='color:black;margin-left:10px'>{{orderId}}</view>
+    </view>
+    <view class='order-info-title flex-display' >订单时间
+      <view class="order-info-li">{{time}}</view>
+    </view>
+  </view>
+
+  <view style='margin-top:15px' class='go-center'>
+        <label class='note-exchange'>请凭此画面至取餐柜台领取饮料</label>
+  </view>
+</view>

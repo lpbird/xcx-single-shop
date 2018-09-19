@@ -1,0 +1,103 @@
+/* pages/order/detail/detail.wxss */
+page{
+  background:#F8F8F8
+}
+.card-fetch{
+  width:40px;
+  background:#E53085;
+  height:100px;
+  font-size:14px;
+  color:white;
+}
+.card-box{
+  display:flex;
+  width:80%;
+  height:100px;
+  background:#FEF9F4;
+}
+.card-left-bar{
+  width:14px;
+  padding:20px 14px;
+}
+.order-info{
+  background: white;
+  margin-top:10px;
+}
+.order-info-title{
+  font-size:12px;
+  color: #D1D1D1;
+  padding: 12px;
+  border-bottom: 1px #E3E3E3 solid
+}
+.order-sum{
+  height:30px;
+  padding:5px 15px;
+  font-size:14px;
+}
+.order-sum-number{
+  font-size:14px;
+  float:right;
+}
+.list-info{
+  width:50%;
+  padding:5px 15px;
+}
+.list-info-size{
+  font-size:12px;
+  color:#B1B1B1;
+}
+.activity-color{
+  color:#E53085;
+}
+.cart-list-box{
+  background:#FFFFFF;
+  display:flex;
+  font-size:15px;
+  border-bottom:1px #E3E3E3 solid;
+}
+.note-exchange{
+  padding:3px 5px;
+  border:1px solid #E53085;
+  color:#E53085;
+  font-size:16px
+}
+.order-info-li{
+  color:black;
+  margin-left:10px;
+}
+.note-card{
+  margin-left:20px;
+  color:#A2A1A0;
+  font-size:12px;
+  margin-top:15px
+}
+.statu-card{
+  font-size:12px;
+  color:#E53085
+}
+.number-card{
+  font-size:28px;
+  padding:0px 20px
+}
+.go-top-10{
+  margin-top:10px
+}
+.order-cut{
+  height:30px;
+  padding:5px 15px;
+  border-bottom: 1px #E3E3E3 solid;
+}
+.order-cut-dec{
+  background:#F07474;
+  font-size:13px;
+  color:white;
+  padding:2px
+}
+.order-cut-note{
+  margin-left:3px;
+  font-size:14px
+}
+.order-cut-number{
+  font-size:14px;
+  float:right;
+}

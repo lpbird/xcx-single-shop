@@ -1,0 +1,154 @@
+/* pages/order/balance/balance.wxss */
+page{
+  background: #F8F8F8
+}
+.operate-bar{
+  z-index: 1001; 
+  position: absolute;
+  bottom: 0px;
+  height:55px;
+  width:100%;
+  display: flex;
+}
+.gouwuche{
+  width:75%;
+  background:#353535;
+  height: 100%; 
+  
+}
+.gouwuche-icon{
+  font-size:40px;
+  color:#87888E;
+  margin-left:10px;
+   position: relative;
+}
+.number-msg{
+  padding: 1px 7px;
+  border-radius:50%;
+  background:white;
+  color:red;
+  font-size:14px;
+  position: absolute;
+  text-align: center;
+  top:0px;
+  right:-5px;
+}
+
+.gouwuche-price{
+  color:#A9A9A9;
+  display:flex;
+  align-items: center;
+  margin-left:10px;
+  font-size:15px
+}
+.submit-btn{
+  height:100%;
+  background:#F7F7F7;
+  width:25%;
+  display:flex;
+}
+.submit-btn-label{
+  color:white;
+  font-size:15px;
+  margin:auto;
+}
+.activity-color{
+  color:#E53085;
+}
+.submit-btn{
+  height:100%;
+  background:#E53085;
+  width:25%;
+  display:flex;
+}
+
+.activity-color-bg{
+  background:#E53085;
+}
+
+.cart-list-box{
+  background:#FFFFFF;
+  display:flex;
+  font-size:15px;
+  border-bottom:1px #E3E3E3 solid;
+}
+.list-info{
+  width:50%;
+  padding:5px 15px;
+}
+.list-info-size{
+  font-size:12px;
+  color:#B1B1B1;
+}
+.icon-li-circle{
+  margin-left:15px;
+  font-size:20px
+}
+.font20{
+  font-size:20px
+}
+.top-bar{
+  height:30px;
+  font-size:14px;
+  background: white;
+}
+.top-left-label{
+  float:left;
+  padding:5px;
+  margin-left:10px;
+}
+.top-right-label{
+  float:right;
+  font-size:13px;
+  padding:5px;
+}
+.order-info{
+  background: white;
+  margin-top:10px;
+}
+.order-info-title{
+  font-size:12px;
+  color: #D1D1D1;
+  padding: 12px;
+  border-bottom: 1px #E3E3E3 solid
+}
+.order-cut{
+  height:30px;
+  padding:5px 15px;
+  border-bottom: 1px #E3E3E3 solid;
+}
+.order-cut-dec{
+  background:#F07474;
+  font-size:13px;
+  color:white;
+  padding:2px
+}
+.order-cut-note{
+  margin-left:3px;
+  font-size:14px
+}
+.order-cut-number{
+  font-size:14px;
+  float:right;
+}
+.order-sum{
+  height:30px;
+  padding:5px 15px;
+  font-size:14px;
+}
+.order-sum-number{
+  font-size:14px;
+  float:right;
+}
+.note{
+  padding:5px 15px;
+  background:white;
+  margin-top:10px
+}
+.note-text{
+  width:95%;
+  font-size:12px;
+  background:#F2F2F2;
+  padding:10px;
+  height:80px;
+}

@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/order/balance/balance",
+    "pages/mine/mine",
+    "pages/order/list/list",
+    "pages/order/detail/detail",
+    "pages/cut/cut"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF0091",
+    "navigationBarTitleText": "奈茶水峰",
+    "navigationBarTextStyle":"white"
+  }
+}

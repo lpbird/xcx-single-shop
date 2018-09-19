@@ -1,0 +1,84 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": false,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.5.2",
+	"appid": "wx98ff5b8f21989623",
+	"projectname": "imitate-coco-xcx",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "列表",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "订单详情",
+					"pathName": "pages/order/detail/detail",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "wode ",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单列表",
+					"pathName": "pages/order/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单详情",
+					"pathName": "pages/order/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "结算",
+					"pathName": "pages/order/balance/balance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "取餐",
+					"pathName": "pages/order/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cut",
+					"pathName": "pages/cut/cut",
+					"query": ""
+				}
+			]
+		}
+	}
+}

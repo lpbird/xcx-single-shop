@@ -1,0 +1,73 @@
+/* pages/order/list/list.wxss */
+Page{
+ background: #f8f8f8;
+}
+.active-color{
+  background: #E53085;
+}
+.unactive-color{
+  background: #999999;
+}
+.start-btn{
+  width:100px;
+  height:30px;
+  background:#F14C66;
+  font-size:14px;
+  color:white;
+}
+.note-btn{
+  font-size:14px;
+  color:grey;
+  margin-top:30px
+}
+.dindgan-i{
+  font-size:100px;
+  color:grey;
+}
+.tab-box{
+  width:50%;
+  display:flex;
+  font-size:14px;
+  color:white
+}
+.info{
+  display: flex;
+  padding: 10px
+}
+.info image{
+  width: 80px;
+  height:80px;
+}
+.detail{
+  font-size: 14px;
+  padding: 10px;
+}
+.detail span{
+  color:#FF9C35
+}
+.orderNum{
+  padding: 2px 10px;
+  font-size: 14px;
+}
+
+.card{
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+  margin-top: 16px;
+}
+.opBar{
+  margin-right:25px;
+  padding-bottom:20px;
+  display:flex;
+}
+.opBar a{
+  font-size: 14px;
+  padding: 3px 10px;
+  background: #E53085;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+}

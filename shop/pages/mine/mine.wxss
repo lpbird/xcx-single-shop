@@ -1,0 +1,48 @@
+/* pages/mine/mine.wxss */
+.top-mode{
+  background: #FF0091;
+  height:400rpx;
+  display: block;
+  overflow: hidden;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.card-info{
+  width: 80%;
+  height:180rpx;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #E53085;
+  z-index: 1000;
+  background: white;
+  padding: 10px;
+}
+.card-box{
+ 
+  margin-top:-20px;
+}
+.bindBtn{
+  font-size: 30rpx;
+}
+.auth{
+  margin: auto;
+  width: 50%;
+  margin-top: 50px;
+  color: #FF0091;
+}
